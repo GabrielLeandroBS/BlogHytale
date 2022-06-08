@@ -1,5 +1,5 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const Api = axios.create({
-  baseURL: '/insertUrl',
+  baseURL: "https://hytale.com/api/blog/post", 
 });
