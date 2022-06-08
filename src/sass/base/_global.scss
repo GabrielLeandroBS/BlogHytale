@@ -10,7 +10,7 @@ main {
 
 .container {
   overflow: hidden;
-  max-width: function.torem(854);
-  padding: function.torem(20);
+  max-width: function.rem(854px);
+  padding: function.rem(20px);
   margin: 0 auto;
 }

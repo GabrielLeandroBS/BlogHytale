@@ -4,7 +4,7 @@
 @mixin flex($align, $justify, $gap) {
   align-items: $align;
   display: flex;
-  gap: function.torem($gap);
+  gap: function.rem($gap);
   justify-content: $justify;
 }
 

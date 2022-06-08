@@ -1,5 +1,6 @@
 @use "./variables";
 @use "sass:map";
+@use "sass:meta";
 @use "sass:math";
 
 // Function for get colors and insert array colors
@@ -10,6 +11,15 @@
 // Function for get fpnt=weight and insert array weights
 @function weight($fontWeight, $arr: variables.$fontWeight) {
   @return map-get($arr, $fontWeight);
+}
+
+//  Get value and transform to unit
+@function strip-unit($value) {
+  @if (meta.type-of($value) == "number" and not math.is-unitless($value)) {
+    @return math.div($value, $value * 0 + 1);
+  }
+
+  @return $value;
 }
 
 // PX to Rem transform function, value in function automatically entered as px and compiled to rem.
