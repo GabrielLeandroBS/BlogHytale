@@ -1,0 +1,17 @@
+@use "./functions" as function;
+@use "./variables";
+
+@mixin flex($align, $justify, $gap) {
+  align-items: $align;
+  display: flex;
+  gap: function.torem($gap);
+  justify-content: $justify;
+}
+
+@mixin breakpoint($value) {
+  @if map-has-key(variables.$breakpoints, $value) {
+    @media screen and (min-width: map-get(variables.$breakpoints, $value)) {
+      @content;
+    }
+  }
+}
