@@ -1,4 +1,5 @@
-import Layout from "../../layout";
+import Layout from '../../layout';
+var tste = 'teste'
 
 export default function Home() {
   return (
