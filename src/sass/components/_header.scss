@@ -1,0 +1,12 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.header {
+  @include mixins.flex(center, space-between, 0);
+  height: functions.rem(80px);
+  padding-inline: functions.rem(37px);
+
+  @include mixins.breakpoint(md) {
+    height: functions.rem(120px);
+  }
+}

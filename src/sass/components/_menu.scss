@@ -1,0 +1,10 @@
+@use "../abstracts/mixins";
+@use "../abstracts/functions";
+
+.menu {
+  @include mixins.flex(center, center, 10px);
+  
+  &__item {
+    list-style: none;
+  }
+}

@@ -20,7 +20,8 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "sass": "^1.52.1",
-    "stylelint-config-standard": "^25.0.0"
+    "stylelint-config-standard": "^25.0.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
