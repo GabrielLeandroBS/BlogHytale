@@ -1,10 +1,11 @@
 @use "../abstracts/functions";
 @use "../abstracts/mixins";
 
-
 .footer {
   @include mixins.flex(center, center, 0);
-  height: functions.rem(100px); &__span {
+  height: functions.rem(100px);
+  
+  &__span {
     color: functions.color("gray-900");
   }
 }

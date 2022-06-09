@@ -7,6 +7,5 @@ export default function Header() {
       <Logo />
       <Menu />
     </header>
-
   );
 }

@@ -3,7 +3,7 @@
 
 .menu {
   @include mixins.flex(center, center, 10px);
-  
+
   &__item {
     list-style: none;
   }

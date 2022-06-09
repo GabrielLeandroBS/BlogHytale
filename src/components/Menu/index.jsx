@@ -1,9 +1,13 @@
+import { menu } from "../../utils/menu";
+
 export default function Menu() {
   return (
     <ul className="menu">
-      <li className="menu__item">Daily Digest</li>
-      <li className="menu__item">Design Tools</li>
-      <li className="menu__item">Tutorials</li>
+      {menu.map(({ name, href }) => (
+        <li className="menu__item">
+          <a href={href}>{name}</a>
+        </li>
+      ))}
     </ul>
   );
 }
