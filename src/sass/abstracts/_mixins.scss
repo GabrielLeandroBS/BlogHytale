@@ -1,8 +1,6 @@
 @use "./functions" as function;
 @use "./variables";
 
-
-
 @mixin flex($align, $justify, $gap) {
   align-items: $align;
   display: flex;
@@ -10,6 +8,11 @@
   justify-content: $justify;
 }
 
+@mixin grid($colums, $gap) {
+  display: grid;
+  grid-gap: $gap;
+  grid-template-columns: $colums;
+}
 
 @mixin breakpoint($value) {
   @if map-has-key(variables.$breakpoints, $value) {

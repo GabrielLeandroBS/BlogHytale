@@ -1,0 +1,14 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.c-articles {
+  padding: functions.rem(80px);
+  background-color: functions.color("gray-100");
+
+  &__wrapper {
+    max-width: functions.rem(980px);
+    margin: 0 auto;
+
+    @include mixins.grid(1fr, functions.rem(20px));
+  }
+}

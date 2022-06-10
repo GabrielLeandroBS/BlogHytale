@@ -1,8 +1,8 @@
 import { Api, ApiKey } from "../api-service";
 
-const getListPosts = async (page = '1') => {
-  const { data } = await Api.get(`/everything?q=frontend&apiKey=${ApiKey}&page=${page}`);
+const getListPostsService = async (page = "1") => {
+  const { data } = await Api.get(`/top-headlines?country=br&apiKey=${ApiKey}&category=business`);
   return data;
 };
 
-export { getListPosts };
+export { getListPostsService };

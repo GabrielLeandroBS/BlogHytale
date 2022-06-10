@@ -1,0 +1,72 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.c-card {
+  background-color: functions.color("lighten");
+  border-radius: functions.rem(20px);
+  display: flex;
+  padding: functions.rem(20px);
+  width: 100%;
+  text-decoration: none;
+  color: functions.color("gray-600");
+
+  @include mixins.breakpoint(md) {
+    padding: functions.rem(30px);
+  }
+
+  &__container {
+    @include mixins.breakpoint(md) {
+      justify-content: space-between;
+      @include mixins.grid(
+        functions.rem(610px) functions.rem(210px),
+        functions.rem(20px)
+      );
+    }
+  }
+
+  &__article {
+    width: 100%;
+  }
+
+  &__date {
+    color: functions.color("gray-500");
+    display: block;
+    font-size: functions.rem(12px);
+    margin-bottom: functions.rem(30px);
+  }
+
+  &__title {
+    margin-bottom: functions.rem(10px);
+    color: functions.color("gray-800");
+  }
+
+  &__subtitle {
+    display: none;
+    font-size: functions.rem(16px);
+    line-height: functions.rem(27px);
+
+    @include mixins.breakpoint(md) {
+      display: block;
+    }
+
+    @include mixins.breakpoint(lg) {
+      font-size: functions.rem(18px);
+    }
+  }
+
+  &__figure {
+    border-radius: functions.rem(10px);
+    overflow: hidden;
+    width: 100%;
+
+    span {
+      height: 100%;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}

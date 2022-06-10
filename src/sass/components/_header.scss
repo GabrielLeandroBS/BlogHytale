@@ -5,8 +5,6 @@
   @include mixins.flex(center, space-between, 0);
   height: functions.rem(80px);
   padding-inline: functions.rem(37px);
-  box-shadow: functions.rem(0) functions.rem(4px) functions.rem(70px)
-    functions.color("gray-800");
 
   @include mixins.breakpoint(md) {
     height: functions.rem(120px);
