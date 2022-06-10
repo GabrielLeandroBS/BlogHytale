@@ -1,10 +1,16 @@
 @use "../abstracts/mixins";
 @use "../abstracts/functions";
-
+@use "../abstracts/variables";
 .menu {
   @include mixins.flex(center, center, 10px);
-
+ 
   &__item {
     list-style: none;
+    
+  }
+  &__text{
+    text-decoration:none;
+    color: functions.color("gray-900");
+
   }
 }

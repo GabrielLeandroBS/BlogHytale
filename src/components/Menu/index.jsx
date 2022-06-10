@@ -5,7 +5,7 @@ export default function Menu() {
     <ul className="menu">
       {menu.map(({ name, href }) => (
         <li className="menu__item" key={name}>
-          <a href={href}>{name}</a>
+          <a className='menu__text' href={href}>{name}</a>
         </li>
       ))}
     </ul>
