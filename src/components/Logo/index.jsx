@@ -1,4 +1,4 @@
-import logo from "../../assets/sprites-svg/logo.svg";
+import logo from '../../assets/sprites-svg/logo.svg';
 
 export default function Logo() {
   return (

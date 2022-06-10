@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { getListPostsService } from "../../services/V1/post-service";
-import Card from "../Card";
-import gradient from "../../assets/images/gradient.jpg";
+import { getListPostsService } from '../../services/V1/post-service';
+import Card from '../Card';
+import gradient from '../../assets/images/gradient.jpg';
 
 export default function Articles() {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,31 +26,29 @@ export default function Articles() {
     })();
   }, []);
 
-  console.log(posts);
-
   return (
     <section className="c-articles">
       <div className="c-articles__wrapper">
         {!isLoading
           ? posts.map(
-              ({
-                publishedAt: published,
-                title,
-                description,
-                urlToImage: image,
-                url
-              }) => (
-                <Card
-                  slug={url}
-                  date={published}
-                  title={title}
-                  subtitle={description}
-                  image={image ? image : gradient}
-                  alt={title}
-                />
-              )
+            ({
+              publishedAt: published,
+              title,
+              description,
+              urlToImage: image,
+              url,
+            }) => (
+              <Card
+                slug={url}
+                date={published}
+                title={title}
+                subtitle={description}
+                image={image ? image : gradient}
+                alt={title}
+              />
             )
-          : "Loading"}
+          )
+          : 'Loading'}
       </div>
     </section>
   );

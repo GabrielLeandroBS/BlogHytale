@@ -1,29 +1,21 @@
 @use "../abstracts/functions";
 @use "../abstracts/mixins";
+
 .c-button {
-  display: none;
-  border-radius: functions.rem(8px);
-  background-color: functions.color("gray-900");
-  width: max-content;
-  text-decoration: none;
   @include mixins.flex(center, center, 0);
+  background-color: functions.color("lighten");
+  border-radius: functions.rem(8px);
+  display: none;
+  text-decoration: none;
+  width: max-content;
+
   @include mixins.breakpoint(lg) {
     @include mixins.flex(center, center, 0);
   }
 
-  &__message {
+  &__span {
     @include mixins.flex(center, center, 0);
+    color: functions.color("gray-900");
     padding: functions.rem(14px);
-    color: functions.color("clear");
-  }
-
-  &--lighten {
-    background-color: functions.color("clear");
-    border: functions.rem(1px) solid functions.color("gray-200");
-  }
-  &--lighten & {
-    &__message {
-      color: functions.color("gray-900");
-    }
   }
 }

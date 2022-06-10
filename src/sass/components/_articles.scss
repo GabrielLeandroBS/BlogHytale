@@ -2,12 +2,16 @@
 @use "../abstracts/mixins";
 
 .c-articles {
-  padding: functions.rem(80px);
   background-color: functions.color("gray-100");
+  padding: functions.rem(80px) functions.rem(20px);
+
+  @include mixins.breakpoint(md) {
+    padding: functions.rem(80px);
+  }
 
   &__wrapper {
-    max-width: functions.rem(980px);
     margin: 0 auto;
+    max-width: functions.rem(980px);
 
     @include mixins.grid(1fr, functions.rem(20px));
   }

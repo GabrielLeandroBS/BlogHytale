@@ -17,11 +17,12 @@
   &__container {
     @include mixins.breakpoint(md) {
       justify-content: space-between;
-      @include mixins.grid(
-        functions.rem(610px) functions.rem(210px),
-        functions.rem(20px)
-      );
+      @include mixins.grid(1fr functions.rem(210px), functions.rem(20px));
     }
+  }
+
+  &__wrapper {
+    max-width: functions.rem(610px);
   }
 
   &__article {
