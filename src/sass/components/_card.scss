@@ -4,11 +4,11 @@
 .c-card {
   background-color: functions.color("lighten");
   border-radius: functions.rem(20px);
+  color: functions.color("gray-600");
   display: flex;
   padding: functions.rem(20px);
-  width: 100%;
   text-decoration: none;
-  color: functions.color("gray-600");
+  width: 100%;
 
   @include mixins.breakpoint(md) {
     padding: functions.rem(30px);
@@ -16,8 +16,8 @@
 
   &__container {
     @include mixins.breakpoint(md) {
-      justify-content: space-between;
       @include mixins.grid(1fr functions.rem(210px), functions.rem(20px));
+      justify-content: space-between;
     }
   }
 
@@ -37,8 +37,8 @@
   }
 
   &__title {
-    margin-bottom: functions.rem(10px);
     color: functions.color("gray-800");
+    margin-bottom: functions.rem(10px);
   }
 
   &__subtitle {
