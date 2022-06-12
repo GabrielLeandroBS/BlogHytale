@@ -1,15 +1,15 @@
-@use "../abstracts/functions" as function;
-@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions";
 
 body,
 main {
-  background-color: function.color("secondary");
+  background-color: functions.color("secondary");
   margin: 0 auto;
   transition: 0.1s linear all;
 }
 
 .container {
-  overflow: hidden;
-  max-width: function.rem(1440px);
   margin: 0 auto;
+  max-width: functions.rem(1440px);
+  overflow: hidden;
+  padding-inline: functions.rem(20px)
 }

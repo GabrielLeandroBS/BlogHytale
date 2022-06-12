@@ -1,0 +1,47 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.heading {
+  @include mixins.flex(center, center, 30px);
+  flex-direction: column;
+  padding-block: functions.rem(60px);
+  width: 100%;
+
+  @include mixins.breakpoint(md) {
+    padding-block: functions.rem(80px);
+  }
+
+  &__title {
+    background: -webkit-linear-gradient(97.1deg, #c41740 4.8%, #ea9c28 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: functions.rem(28px);
+    font-weight: functions.weight(700);
+    max-width: functions.rem(970px);
+    text-align: center;
+
+    @include mixins.breakpoint(md) {
+      font-size: functions.rem(46px);
+    }
+
+    @include mixins.breakpoint(lg) {
+      font-size: functions.rem(76px);
+    }
+  }
+
+  &__subtitle {
+    max-width: functions.rem(690px);
+    font-size: functions.rem(13px);
+    text-align: center;
+    color: functions.color("gray-600");
+
+    @include mixins.breakpoint(md) {
+      font-size: functions.rem(24px);
+    }
+
+    @include mixins.breakpoint(lg) {
+      font-size: functions.rem(28px);
+    }
+  }
+}

@@ -3,7 +3,7 @@
 
 .c-articles {
   background-color: functions.color("gray-100");
-  padding: functions.rem(80px) functions.rem(20px);
+  padding: functions.rem(40px) functions.rem(20px);
 
   @include mixins.breakpoint(md) {
     padding: functions.rem(80px);
