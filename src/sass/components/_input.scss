@@ -1,0 +1,16 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+
+
+.input{ 
+    padding: functions.rem(15px) functions.rem(21px);  
+    width: functions.rem(297px);
+    border: 1px solid functions.color("gray-300");
+    border-radius: functions.rem(8px);
+}
+::-webkit-input-placeholder {
+    color: functions.color("gray-400");
+    padding-left: functions.rem(21px);
+ }
+  
