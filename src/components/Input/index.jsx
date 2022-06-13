@@ -1,7 +1,7 @@
-
+import Button from '../Button'
 export default function Input (){
    return (
-   <section> <input type="text" className="input" placeholder="Email Address"/> 
+   <section> <Button  /><input type="text" className="input" placeholder="Email Address"/> 
    </section>
    )
 
