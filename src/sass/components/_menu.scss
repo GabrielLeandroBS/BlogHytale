@@ -1,6 +1,6 @@
 @use "../abstracts/mixins";
 @use "../abstracts/functions";
-
+@use "../abstracts/variables";
 .menu {
   &__navigation {
     @include mixins.flex(center, center, 40px);
@@ -9,24 +9,11 @@
 
   &__item {
     list-style: none;
+    
   }
-
-  &__text {
-    text-decoration: none;
+  &__text{
+    text-decoration:none;
     color: functions.color("gray-900");
-    font-size: functions.rem(16px);
-    font-weight: functions.weight("medium");
-  }
 
-  &__desktop {
-    display: none;
-    @include mixins.breakpoint(md) {
-      @include mixins.flex(center, center, 40px);
-    }
-  }
-  &__mobile {
-    @include mixins.breakpoint(md) {
-      display: none;
-    }
   }
 }
