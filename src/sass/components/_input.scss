@@ -1,0 +1,36 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
+.c-input {
+  position: relative;
+
+  &-newsletter {
+    @include mixins.flex(center, center, 0);
+    height: functions.rem(50px);
+    margin-top: functions.rem(34px);
+    max-width: functions.rem(400px);
+  }
+
+  &-newsletter & {
+    &__input {
+      border-bottom-left-radius: functions.rem(8rem);
+      border-top-left-radius: functions.rem(8rem);
+      border: functions.rem(1px) solid functions.color("gray-300");
+      height: 100%;
+      padding: functions.rem(20px);
+      outline: none
+    }
+
+    &__button {
+      @include mixins.flex(center, center, 0);
+      background-color: functions.color("gray-900");
+      border-bottom-right-radius: functions.rem(8rem);
+      border-top-right-radius: functions.rem(8rem);
+      color: functions.color("lighten");
+      display: inline-block;
+      height: 100%;
+      padding-inline: functions.rem(24px);
+      cursor: pointer;
+    }
+  }
+}

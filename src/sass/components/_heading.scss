@@ -1,5 +1,6 @@
 @use "../abstracts/functions";
 @use "../abstracts/mixins";
+@use '../abstracts/placeholders';
 
 .heading {
   @include mixins.flex(center, center, 30px);
@@ -12,10 +13,7 @@
   }
 
   &__title {
-    background: -webkit-linear-gradient(97.1deg, #c41740 4.8%, #ea9c28 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @extend %text-gradient;
     font-size: functions.rem(28px);
     font-weight: functions.weight(700);
     max-width: functions.rem(970px);

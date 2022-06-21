@@ -2,7 +2,7 @@
 @use "../abstracts/functions";
 
 .menu {
-  &__unlist {
+  &__navigation {
     @include mixins.flex(center, center, 40px);
     list-style-type: none;
   }

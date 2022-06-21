@@ -1,4 +1,4 @@
-export const menu = [
+export const MENU = [
   {
     href: '/',
     name: 'Daily Digest',

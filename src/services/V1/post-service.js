@@ -1,9 +1,20 @@
-import { Api, ApiKey } from '../api-service';
+import { Api } from '../api-service';
 
-const getListPostsService = async (page = '1') => {
-  const { data } = await Api.get(`/top-headlines?country=br&apiKey=${ApiKey}&category=business&pageSize=10`);
+const ApiKey = import.meta.env.VITE_API_KEY;
 
+const getListPostsTopHeadLinesService = async () => {
+  const { data } = await Api.get(
+    `/top-headlines?country=br&apiKey=${ApiKey}&category=business&pageSize=10`
+  );
+
+  console.log(data);
   return data;
 };
 
-export { getListPostsService };
+const getListPostsEverythingService = async (theme = 'bitcoin') => {
+  const results = await Api.get(`/everything?q=${theme}&apiKey=${ApiKey}`);
+
+  return results;
+};
+
+export { getListPostsTopHeadLinesService, getListPostsEverythingService };

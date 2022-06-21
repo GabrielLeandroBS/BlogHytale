@@ -1,0 +1,31 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+.c-newsletter {
+  @include mixins.flex(center, center, 10px);
+  flex-direction: column;
+  padding: functions.rem(40px);
+
+  @include mixins.breakpoint(md) {
+    padding: functions.rem(60px);
+  }
+
+  &__title {
+    @extend %text-gradient;
+    font-size: functions.rem(18px);
+    font-weight: functions.weight(700);
+    max-width: functions.rem(970px);
+    text-align: center;
+
+    @include mixins.breakpoint(md) {
+      font-size: functions.rem(28px);
+    }
+  }
+
+  &__subtitle {
+    font-size: functions.rem(16px);
+    max-width: functions.rem(472px);
+    text-align: center;
+  }
+}
