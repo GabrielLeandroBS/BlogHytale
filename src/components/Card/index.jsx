@@ -15,7 +15,7 @@ export default function Card({ date, title, subtitle, image, alt, slug }) {
       <article className="c-card__article" aria-label="Article">
         <div className="c-card__container">
           <div className="c-card__wrapper">
-            <span className="c-card__date">{data}</span>
+            <time className="c-card__date">{data}</time>
             <h2 className="c-card__title">{title}</h2>
             <p className="c-card__subtitle">{subtitle}</p>
           </div>
